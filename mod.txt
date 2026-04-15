@@ -5,6 +5,3 @@ version="1.0.0"
 
 [autoload]
 ScopeSens="res://ScopeSensScaling/ScopeSensScaling.gd"
-
-[updates]
-modworkshop=0
