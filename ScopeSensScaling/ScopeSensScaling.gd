@@ -23,9 +23,9 @@ func _process(_delta):
 		return
 
 	# Scaling logic
-	ScaleScopeSensitivity(camera_node)
+	scale_scope_sensitivity(camera_node)
 
-func ScaleScopeSensitivity(camera_node: Camera3D):
+func scale_scope_sensitivity(camera_node: Camera3D):
 	# Don't scale if we have PIP scopes enabled
 	if gameData.PIP: return
 
