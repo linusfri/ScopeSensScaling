@@ -33,10 +33,10 @@ func scale_scope_sensitivity(camera_node: Camera3D):
 		gameData.scopeSensitivity = preferences.scopeSensitivity
 		return
 
-	
 	var scope_fov_half_rad = deg_to_rad(camera_node.fov / 2.0)
 	var base_fov_half_rad = deg_to_rad(preferences.baseFOV / 2.0)
-	if base_fov_half_rad <= 0.0:
+
+	if base_fov_half_rad <= 0.0 || scope_fov_half_rad <= 0:
 		return
 
 	# This is using focal length scaling to try to preserve
