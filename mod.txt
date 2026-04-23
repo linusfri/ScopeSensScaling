@@ -1,7 +1,10 @@
 [mod]
 name="Scope Sensitivity Scaling"
 id="scope_sens_scaling"
-version="1.0.0"
+version="1.0.3"
 
 [autoload]
 ScopeSens="res://ScopeSensScaling/ScopeSensScaling.gd"
+
+[updates]
+modworkshop=56145
