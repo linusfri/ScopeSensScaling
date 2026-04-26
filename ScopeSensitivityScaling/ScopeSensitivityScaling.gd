@@ -7,8 +7,8 @@ var preferences: Preferences
 
 func _ready() -> void:
 	await get_tree().process_frame
-	mcmConfig = get_node_or_null("/root/McmConfig")
 	_load_preferences()
+	mcmConfig = get_node_or_null("/root/McmConfig")
 
 func _load_preferences():
 	if ResourceLoader.exists("user://Preferences.tres"):
