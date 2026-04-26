@@ -4,7 +4,7 @@ id="scope_sens_scaling"
 version="1.0.3"
 
 [autoload]
-ScopeSensitivityScaling="res://ScopeSensitivityScaling/ScopeSensitivitySensScaling.gd"
+ScopeSensitivityScaling="res://ScopeSensitivityScaling/ScopeSensitivityScaling.gd"
 McmConfig="res://ScopeSensitivityScaling/McmConfig.gd"
 
 [updates]
