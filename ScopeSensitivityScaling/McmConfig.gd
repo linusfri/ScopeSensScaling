@@ -42,9 +42,9 @@ func _ready():
 	)
 
 func update_config_properties(configFile: ConfigFile):
-	scopeSensitivityScalingSettings.monitor_distance_percent = get_mcm_float(configFile, "Float", "MonitorDistancePercent", 0.75)
+	scopeSensitivityScalingSettings.monitor_distance_percent = get_mcm_value(configFile, "Float", "MonitorDistancePercent", 0.75)
 
-func get_mcm_float(config: ConfigFile, section: String, key: String, default: float) -> float:
+func get_mcm_value(config: ConfigFile, section: String, key: String, default: Variant) -> float:
 	var data = config.get_value(section, key, default)
 	if data is Dictionary:
 		return float(data.get("value", default))
