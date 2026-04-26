@@ -1,5 +1,8 @@
 # Scope sensitivity scaling
 
+### Requires MCM
+[MCM](https://modworkshop.net/mod/53713)
+
 ### What is doesn't do
 Work with PIP scopes. This mod does not scale sens when PIP is enabled. Because the behaviour of PIP is very strange at the moment and zooms baseFOV as well as scope FOV. So i did not bother fixing that in this first version.
 
