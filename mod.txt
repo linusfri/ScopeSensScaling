@@ -4,7 +4,8 @@ id="scope_sens_scaling"
 version="1.0.3"
 
 [autoload]
-ScopeSens="res://ScopeSensScaling/ScopeSensScaling.gd"
+ScopeSensitivityScaling="res://ScopeSensitivityScaling/ScopeSensitivitySensScaling.gd"
+McmConfig="res://ScopeSensitivityScaling/McmConfig.gd"
 
 [updates]
 modworkshop=56145

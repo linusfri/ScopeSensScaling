@@ -11,3 +11,6 @@ This mod scales the sensitivity based on the current fov when using scopes. It s
 2. Go to steam -> right click road to vostok -> Manage -> Browse Local Files
 3. If not already created, create a folder in game directory named ``mods``
 4. Drag the downloaded mod to ``mods`` folder
+
+### For the nerds that came here from the comment in ScopeSensScaling.gd
+[A link to the calculation example](https://www.wolframalpha.com/input?i=%28lim+x+-%3E+0+arctan%28x+*+tan%280.25%29%29+%2F+arctan%28x+*+tan%280.5%29%29%29+%3D+%28tan%280.25%29+%2F+tan%280.5%29%29)
