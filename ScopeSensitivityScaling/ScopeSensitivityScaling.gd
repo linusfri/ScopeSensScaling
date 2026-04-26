@@ -1,18 +1,19 @@
 extends Node
 
+const PREFERENCES_PATH = "user://Preferences.tres"
+
 var gameData = preload("res://Resources/GameData.tres")
-var mcmConfig: Node
+var scopeSensitivityScalingSettings = preload("res://ScopeSensitivityScaling/ScopeSensitivityScalingSettings.tres")
 
 var preferences: Preferences
 
 func _ready() -> void:
 	await get_tree().process_frame
 	_load_preferences()
-	mcmConfig = get_node_or_null("/root/McmConfig")
 
 func _load_preferences():
 	if ResourceLoader.exists("user://Preferences.tres"):
-		preferences = ResourceLoader.load("user://Preferences.tres", "", ResourceLoader.CACHE_MODE_REUSE) as Preferences
+		preferences = ResourceLoader.load(PREFERENCES_PATH, "", ResourceLoader.CACHE_MODE_REUSE) as Preferences
 
 func _process(_delta):
 	# Setup
@@ -41,7 +42,7 @@ func scale_scope_sensitivity(camera_node: Camera3D):
 		return
 
 	# Source: https://www.kovaak.com/sens-scaling
-	var monitor_distance_percent = mcmConfig.get_monitor_distance_percent() if mcmConfig else 0.75
+	var monitor_distance_percent = scopeSensitivityScalingSettings.monitor_distance_percent
 	var sensitivity_scaling_factor = calculate_scaling_factor(scope_fov, base_fov, monitor_distance_percent)
 
 	gameData.scopeSensitivity = preferences.scopeSensitivity * sensitivity_scaling_factor
